@@ -1,0 +1,91 @@
+html {
+  background: lavender;
+  transition: background 1s linear;
+  -webkit-transition: background 1s linear;
+  -moz-transition: background 1s linear;
+}
+
+#box {
+  background: white;
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  min-height: 300px;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+#random-quote {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+#author {
+  font-size: 26px;
+}
+
+.wrapper {
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: 350px;
+}
+
+button {
+  outline: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 26px;
+  background: lavender;
+  color: black;
+  transition: background 1s linear, color 1s linear;
+  -webkit-transition: background 1s linear, color 1s linear;
+  -moz-transition: background 1s linear, color 1s linear;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  #box {
+    width: 80%;
+    min-height: 260px;
+    padding: 25px;
+  }
+  #random-quote {
+    width: 80%;
+    font-size: 16px;
+  }
+  #author {
+    font-size: 20px;
+  }
+  button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #box {
+    width: 90%;
+    min-height: 220px;
+    padding: 10px;
+  }
+  #random-quote {
+    width: 90%;
+    font-size: 12px;
+  }
+  #author {
+    font-size: 16px;
+  }
+  button {
+    font-size: 18px;
+  }
+  #random-quote {
+    margin: 0 auto;
+  }
+}
