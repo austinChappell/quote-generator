@@ -9,6 +9,7 @@ $(document).ready(function() {
       var pickRedNumber = Math.floor(Math.random() * 256);
       var pickGreenNumber = Math.floor(Math.random() * 256);
       var pickBlueNumber = Math.floor(Math.random() * 256);
+      var colorAvg = (pickRedNumber + pickGreenNumber + pickBlueNumber) / 3;
 
       var randomColor = 'rgb(' + pickRedNumber + ', ' + pickGreenNumber + ', ' + pickBlueNumber + ')'
 
@@ -19,10 +20,10 @@ $(document).ready(function() {
         html += '"</p>'
 
       $('#random-quote').html(html);
-      $('#author').html('- President Donal Trump');
+      $('#author').html('- President Donald Trump');
       $('button').css('background', randomColor);
       $('html').css('background', randomColor);
-      if(pickRedNumber < 150 && pickBlueNumber < 200 && pickGreenNumber < 200 || pickRedNumber < 200 && pickBlueNumber < 150 && pickGreenNumber < 200 || pickRedNumber < 200 && pickBlueNumber < 200 && pickGreenNumber < 150) {
+      if(colorAvg < 185) {
         $('button').css('color', 'white');
       } else {
         $('button').css('color', 'black');
